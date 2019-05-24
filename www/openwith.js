@@ -221,8 +221,8 @@ function initOpenwithPlugin(root) {
     };
 
     openwith.setLoggedIn = function(status) {
-        //status = !!status;
-        cordova.exec(null, null, PLUGIN_NAME, 'setLoggedIn', [true]);//[status]);
+        status = !!status;
+        cordova.exec(null, null, PLUGIN_NAME, 'setLoggedIn', [status]);
     };
 
     return openwith;
